@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- navbar -->
+        <div class="nav">
+            <div class="flex-container">
+                <h1 class="nav-title">DojoWeather</h1>
+                <ul class="nav-links">
+                    <li>
+                        <h2 onclick="displayMessage()">Burbank</h2>
+                    </li>
+                    <li>
+                        <h2 onclick="displayMessage()">Chicago</h2>
+                    </li>
+                    <li>
+                        <h2 onclick="displayMessage()">Dallas</h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- main -->
+        <div class="main">
+            <div class="main-first-part">
+                <h2>San Jose</h2>
+                <div class="right-section">
+                    <p>show temperature in</p>
+                    <select name="temperature" onchange="convert(this)">
+                        <option>°C</option>
+                        <option>°F</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div class="main-content">
+                <div class="card">
+                    <h3>Today</h3>
+                    <img src="./assets/some_rain.png" alt="some_rain">
+                    <p>some rain</p>
+                    <div class="card-footer">
+                        <h4 class="red" id="temperature1">24</h4>
+                        <h4 class="blue" id="temperature2">18</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Tomorrow</h3>
+                    <img src="./assets/some_sun.png" alt="some_sun">
+                    <p>some sun</p>
+                    <div class="card-footer">
+                        <h4 class="red" id="temperature3">27</h4>
+                        <h4 class="blue" id="temperature4">19</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Friday</h3>
+                    <img src="./assets/some_clouds.png" alt="some_clouds">
+                    <p>some clouds</p>
+                    <div class="card-footer">
+                        <h4 class="red" id="temperature5">21</h4>
+                        <h4 class="blue" id="temperature6">16</h4>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Saturday</h3>
+                    <img src="./assets/some_sun.png" alt="some_sun">
+                    <p>some sun</p>
+                    <div class="card-footer">
+                        <h4 class="red" id="temperature7">26</h4>
+                        <h4 class="blue" id="temperature8">21</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <div class="footer">
+            <img src="./assets/cookie.png" alt="cookie">
+            <div class="footer-content">
+                <h3>Stop! Cookie time</h3>
+                <p>
+                    We use cookies (sadly not the edible ones) to personalize content and ads,
+                    to provide social media features and to analyse our traffic. <a href="#">Read more...</a>
+                </p>
+            </div>
+            <button class="btn-secondary" onclick="acceptCookies('.footer')">I Accept</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
